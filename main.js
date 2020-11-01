@@ -34,10 +34,22 @@ var students = [
 ];
 
 console.log("ESERCIZIO 2");
-  for (var i = 0; i < students.length; i++) {
-      console.log("Studente " + (i+1));
-      for(var key in students[i]){
-          if(key == "name" || key == "surname" )
-          console.log(key + ": " + students[i][key]);
-      }
-  }
+for (var i = 0; i < students.length; i++) {
+    console.log("Studente " + (i+1));
+    for(var key in students[i]){
+        if(key == "name" || key == "surname" )
+        console.log(key + ": " + students[i][key]);
+    }
+};
+
+// ESERCIZIO 3 tramite 3 prompt, chiedere all'utente il nome, il cognome e l'età di un nuovo studente. Creare con questi dati un nuovo oggetto e inserirlo nell'array del punto precedente.
+var newStudent = {};
+
+newStudent.name = prompt('Inserisci il tuo nome');
+newStudent.surname = prompt('Inserisci il tuo cognome');
+newStudent.age = prompt('Inserisci la tua età');
+
+students.push(newStudent);
+
+console.log("ESERCIZIO 3");
+console.log(students);
